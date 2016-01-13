@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="programs/server/app/lib/|programs/server/packages/|programs/server/app/server/|programs/web.browser/packages/|programs/server/|programs/web.browser/app/client/|programs/web.browser/app/lib/" kind="src" path=".meteor/local/build"/>
+	<classpathentry excluding="app/lib/|packages/|app/server/" kind="src" path=".meteor/local/build/programs/server"/>
+	<classpathentry kind="src" path=".meteor/local/build/programs/server/app/lib"/>
+	<classpathentry kind="src" path=".meteor/local/build/programs/server/app/server"/>
+	<classpathentry kind="src" path=".meteor/local/build/programs/server/packages"/>
+	<classpathentry kind="src" path=".meteor/local/build/programs/web.browser/app/client"/>
+	<classpathentry kind="src" path=".meteor/local/build/programs/web.browser/app/lib"/>
+	<classpathentry kind="src" path=".meteor/local/build/programs/web.browser/packages"/>
+	<classpathentry kind="src" path="client"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="src" path="server"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
