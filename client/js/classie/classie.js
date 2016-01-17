@@ -12,7 +12,7 @@
 /*global define: false */
 
 ( function( window ) {
-
+console.log("classies olen");
 'use strict';
 
 // class helper functions from bonzo https://github.com/ded/bonzo
@@ -31,9 +31,11 @@ if ( 'classList' in document.documentElement ) {
   };
   addClass = function( elem, c ) {
     elem.classList.add( c );
+	console.log(elem);
   };
   removeClass = function( elem, c ) {
     elem.classList.remove( c );
+	console.log(elem);
   };
 }
 else {

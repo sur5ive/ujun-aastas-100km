@@ -12,7 +12,7 @@ Template.header.events({
 
 Template.navbar.rendered = function(){
         console.log("olen rendered" +  (jQuery)(this));
-	$('#creative').attr("src","/js/creative.js");
+	$('#creative').attr("src=","/js/creative.js");
 };				
 		
 Template.entry_add_form.events({
