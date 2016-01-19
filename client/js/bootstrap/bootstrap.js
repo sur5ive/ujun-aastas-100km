@@ -3,7 +3,7 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under the MIT license
  */
-console.log("olen bootstrapis");
+
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
@@ -2360,4 +2360,6 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
+console.log("Finished loading Bootstrap");
 }(jQuery);
+

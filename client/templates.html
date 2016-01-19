@@ -1,14 +1,4 @@
-<!--!DOCTYPE html-->
-<!--html lang="en"-->
-
-
-
-
-<!--/html-->
-
-
 <template name="user_logged_in">
-
 	{{#if loggingIn}}
 		<span class="">Login sisse</span>
 	{{else}}
@@ -28,7 +18,6 @@
 </template>
 
 <template name="navbar">
-<script>console.log("olen mainis")</script>
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,6 +57,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <script>console.log("Finished loading Navbar")</script>
 </template>
 
 <template name="header">
@@ -76,13 +66,13 @@
             <div class="header-content-inner">
                 <h1>Ujun aastas 100 km</h1>
                 <hr>
-                	{{#if currentUser}}
-						<p>Tere tulemast tagasi, {{currentUser.services.facebook.first_name}}!</p>
-                		<a class="btn btn-primary btn-xl wow tada page-scroll js-entry-modal-open">Sisesta tulemus</a>						
-					{{else}}
-						<p>Liitu meiega ning pane ennast proovile!</p>
-						<a href="#about" class="btn btn-primary btn-xl wow tada page-scroll">Uuri edasi</a>
-                	{{/if}}
+				{{#if currentUser}}
+					<p>Tere tulemast tagasi, {{currentUser.services.facebook.first_name}}!</p>
+					<a class="btn btn-primary btn-xl wow tada js-entry-modal-open">Sisesta tulemus</a>						
+				{{else}}
+					<p>Liitu meiega ning pane ennast proovile!</p>
+					<a href="#about" class="btn btn-primary btn-xl wow tada page-scroll">Uuri edasi</a>
+				{{/if}}
             </div>
         </div>
     </header>
@@ -263,8 +253,6 @@
 	{{/unless}}
 </template>
 
-
-
 <template name="contact">
     <section id="contact">
         <div class="container">
@@ -316,4 +304,3 @@
 		</div>
 	</div>
 </template>
-

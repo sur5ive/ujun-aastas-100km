@@ -8,7 +8,6 @@
 *
 * Date: Thu May 05 14:23:00 2011 -0600
 */
-console.log("fittext olen");
 (function( $ ){
 
   $.fn.fitText = function( kompressor, options ) {
@@ -35,9 +34,10 @@ console.log("fittext olen");
 
       // Call on resize. Opera debounces their resize by default.
       $(window).on('resize.fittext orientationchange.fittext', resizer);
-
+	console.log("Finished Fittext");
     });
 
   };
 
 })( jQuery );
+

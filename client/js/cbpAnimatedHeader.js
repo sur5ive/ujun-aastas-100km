@@ -15,7 +15,6 @@ $(window).load(function(){
 			header = document.querySelector( '.navbar-default' ),
 			didScroll = false,
 			changeHeaderOn = 300;
-			console.log("headeris olen" + header);
 
 		function init() {
 			window.addEventListener( 'scroll', function( event ) {
@@ -44,3 +43,4 @@ $(window).load(function(){
 		init();
 	})();
 });
+

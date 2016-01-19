@@ -1,29 +1,40 @@
-console.log("mainis olen");
 // accounts config
 Accounts.ui.config({
 	passwordSignupFields: "USERNAME_AND_EMAIL"
 });
 
+// Load template script for smooth scrolling
+// Q: Script needs to be loaded inside the <body> tag for some reason
+Template.navbar.rendered = function(){
+	console.log("Navbar rendered");
+	$('#js-src-creative').attr("src","/js/creative.js");
+};				
+
+// Header template events
 Template.header.events({
+	// Show the New Entry form
 	'click .js-entry-modal-open':function(event){
 		$("#entry_add_form").modal('show');
 	}
 });
 
-Template.navbar.rendered = function(){
-        console.log("olen rendered" +  (jQuery)(this));
-	$('#creative').attr("src","/js/creative.js");
-};				
-		
+Template.entry_add_form.rendered = function(){
+	console.log("New Entry form rendered");
+	$('#entry_datepicker').datepicker({
+		dateFormat: 'dd-mm-yy',
+		minDate: '+5d',
+		changeMonth: true,
+		changeYear: true,
+		altFormat: "yy-mm-dd"
+	});
+};		
+
+// New Entry form (modal) events		
 Template.entry_add_form.events({
-	'loaded':function(event){
-		$('#entry_datepicker input').datepicker({});
-	},
 	'click .js-entry-datepicker':function(event){
-		console.log($('#entry_datepicker').attr("placeholder"));
-		$('#entry_datepicker').attr("placeholder","vana jopp");
-		$('#entry_datepicker').datepicker();
-		$("#entry_add_form").modal('show');
+		//$('#entry_datepicker').attr("placeholder","vana jopp");
+		//$('#entry_datepicker').datepicker('show');
+		console.log("fuck");
 	},
 	'click .js-add-entry':function(event){
 
@@ -63,3 +74,5 @@ Template.user_logged_in.events({
 		});
 	}
 });
+
+console.log("Finished loading main.js");
